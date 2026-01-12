@@ -1,6 +1,6 @@
 const InventoryList = ({ inventory, title }) => {
   return (
-    <>
+    <div className="inventory-list">
       <h2>{title}</h2>
       <table>
         <tr>
@@ -16,7 +16,7 @@ const InventoryList = ({ inventory, title }) => {
           </tr>
         )}
       </table>
-    </>
+    </div>
   )
 }
 
