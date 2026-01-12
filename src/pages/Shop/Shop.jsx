@@ -16,7 +16,8 @@ const Shop = () => {
     <main>
       <h1>Shop</h1>
       <button onClick={handleAddItem}>Click Here</button>
-      <InventoryList inventory={shopInventory} />
+      <InventoryList inventory={shopInventory} title='Shop Inventory' />
+      <InventoryList inventory={userInventory} title='User Inventory' />
     </main>
   )
 }

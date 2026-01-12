@@ -1,7 +1,7 @@
-const InventoryList = ({ inventory }) => {
+const InventoryList = ({ inventory, title }) => {
   return (
     <>
-      <h2>Inventory List</h2>
+      <h2>{title}</h2>
       <table>
         <tr>
           <th>Item</th>
