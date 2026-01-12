@@ -7,7 +7,8 @@ const Shop = () => {
 
   function handleAddItem() {
     const newItem = { _id: 62555, name: 'Magic Wand', cost: 1, weight: 2 }
-    setInventory([newItem])
+    const newItemTwo = { _id: 63444, name: 'Scroll', cost: 100, weight: 5 }
+    setInventory([newItem, newItemTwo, ...inventory])
   }
 
   return (
