@@ -7,16 +7,17 @@ const Shop = () => {
   const [shopInventory, setShopInventory] = useState(inventoryData)
   const [userInventory, setUserInventory] = useState([])
 
-  function handleAddItem() {
-    
+  function handleAddItem(item) {
+    setUserInventory([...userInventory, item])
+    setShopInventory(shopInventory.filter(el => el._id !== item._id))
   }
 
   return (
     <main>
       <h1>Shop</h1>
       <section>
-        <InventoryList inventory={shopInventory} title='Shop Inventory' />
-        <InventoryList inventory={userInventory} title='User Inventory' />
+        <InventoryList title='Shop Inventory' inventory={shopInventory} handleAddItem={handleAddItem} />
+        <InventoryList title='User Inventory' inventory={userInventory}  />
       </section>
     </main>
   )
