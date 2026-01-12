@@ -1,4 +1,4 @@
-const InventoryList = ({ inventory, title, handleAddItem }) => {
+const InventoryList = ({ inventory, title, handleAddItem, handleRemoveItem }) => {
   return (
     <div className="inventory-list">
       <h2>{title}</h2>
@@ -22,7 +22,7 @@ const InventoryList = ({ inventory, title, handleAddItem }) => {
             <td>
               {handleAddItem 
                 ? <button onClick={() => handleAddItem(item)}>+</button>
-                : <button>x</button>
+                : <button onClick={() => handleRemoveItem(item)}>x</button>
               }
 
             </td>
