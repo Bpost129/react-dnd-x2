@@ -12,12 +12,17 @@ const Shop = () => {
     setShopInventory(shopInventory.filter(el => el._id !== item._id))
   }
 
+  function handleRemoveItem(item) {
+    setShopInventory([...shopInventory, item])
+    setUserInventory(userInventory.filter(el => el._id !== item._id))
+  }
+
   return (
     <main>
       <h1>Shop</h1>
       <section>
         <InventoryList title='Shop Inventory' inventory={shopInventory} handleAddItem={handleAddItem} />
-        <InventoryList title='User Inventory' inventory={userInventory}  />
+        <InventoryList title='User Inventory' inventory={userInventory} handleRemoveItem={handleRemoveItem} />
       </section>
     </main>
   )

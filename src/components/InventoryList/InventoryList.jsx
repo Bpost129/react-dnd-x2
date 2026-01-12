@@ -7,6 +7,12 @@ const InventoryList = ({ inventory, title, handleAddItem }) => {
           <th>Item</th>
           <th>Cost</th>
           <th>Weight</th>
+          <th>
+            {handleAddItem
+              ? 'Add'
+              : 'Remove'
+            }
+          </th>
         </tr>
         {inventory.map(item =>
           <tr>
@@ -15,8 +21,8 @@ const InventoryList = ({ inventory, title, handleAddItem }) => {
             <td>{item.weight}</td>
             <td>
               {handleAddItem 
-                ? <button onClick={() => handleAddItem(item)}>Add Item</button>
-                : <button>Remove Item</button>
+                ? <button onClick={() => handleAddItem(item)}>+</button>
+                : <button>x</button>
               }
 
             </td>
