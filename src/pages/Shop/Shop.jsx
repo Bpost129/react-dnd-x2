@@ -1,5 +1,5 @@
 import { inventoryData } from "../../data/data"
-
+import InventoryList from "../../components/InventoryList/InventoryList"
 
 const Shop = () => {
   console.log('Inventory data:', inventoryData)
@@ -7,20 +7,7 @@ const Shop = () => {
   return (
     <main>
       <h1>Shop</h1>
-      <table>
-        <tr>
-          <th>Item</th>
-          <th>Cost</th>
-          <th>Weight</th>
-        </tr>
-        {inventoryData.map(item =>
-          <tr>
-            <td>{item.name}</td>
-            <td>${item.cost}</td>
-            <td>{item.weight}</td>
-          </tr>
-        )}
-      </table>
+      <InventoryList inventory={inventoryData} />
     </main>
   )
 }
