@@ -7,11 +7,20 @@ const Shop = () => {
   return (
     <main>
       <h1>Shop</h1>
-      <ul>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Weight</th>
+          <th>Cost</th>
+        </tr>
         {inventoryData.map(item =>
-          <li>Item: {item.name} <span>Weight: {item.weight}</span></li>
+          <tr>
+            <td>{item.name}</td>
+            <td>{item.weight}</td>
+            <td>${item.cost}</td>
+          </tr>
         )}
-      </ul>
+      </table>
     </main>
   )
 }
