@@ -10,14 +10,14 @@ const Shop = () => {
       <table>
         <tr>
           <th>Item</th>
-          <th>Weight</th>
           <th>Cost</th>
+          <th>Weight</th>
         </tr>
         {inventoryData.map(item =>
           <tr>
             <td>{item.name}</td>
-            <td>{item.weight}</td>
             <td>${item.cost}</td>
+            <td>{item.weight}</td>
           </tr>
         )}
       </table>

@@ -56,6 +56,19 @@ th {
   border: 1px solid whitesmoke;
 }
 
+th:first-child {
+  width: 160px;
+}
+
+th:nth-child(2), th:nth-child(3) {
+  width: 100px;
+}
+
 td {
   border: 1px solid lightgrey;
+}
+
+td:first-child {
+  text-align: start;
+  padding-left: 6px;
 }
