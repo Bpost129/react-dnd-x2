@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react"
 
+import { getMonsterList } from "../../services/api-calls"
+
 const MonsterList = () => {
   const [monsterList, setMonsterList] = useState([])
 
   useEffect(() => {
-    console.log('Component mounted!')
+    const fetchMonsterList = async () => {
+      const monsterData = await getMonsterList()
+      setMonsterList(monsterData)
+    }
+    fetchMonsterList()
   }, [])
   
   if (!monsterList.length) return <h1>Loading scary monsters...</h1>
