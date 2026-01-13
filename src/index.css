@@ -23,6 +23,9 @@
 
 body {
   margin: 0;
+  /* display: flex; */
+  z-index: -1;
+  padding-top: 80px;
   min-width: 320px;
   min-height: 100vh;
 }
