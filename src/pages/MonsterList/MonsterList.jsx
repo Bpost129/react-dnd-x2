@@ -21,7 +21,7 @@ const MonsterList = () => {
       <h1>Monster List</h1>
       {monsterList.map(monster =>
         <div className="link-container" key={monster._id}>
-          {monster.name}
+          <Link to={`/monsters/${monster._id}`}>{monster.name}</Link>
         </div>
       )}
     </main>
