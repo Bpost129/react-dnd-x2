@@ -28,6 +28,11 @@ const SpellSearch = () => {
     <main className="spell-list">
       <h1>Spell Search</h1>
       <SearchForm handleSpellSearch={handleSpellSearch} />
+      {searchResults.length ?
+        <h2>{searchResults.length} results found</h2>
+        :
+        <h2>Please search for a spell</h2>
+      }
       {searchResults.map(spell =>
         <div key={spell._id} className="link-container">
           {spell.name}
