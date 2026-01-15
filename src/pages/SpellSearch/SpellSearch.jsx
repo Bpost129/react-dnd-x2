@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 
 import SearchForm from "../../components/SearchForm/SearchForm"
+import SpellCard from "../../components/SpellCard/SpellCard"
 
 import { getSpells } from "../../services/api-calls"
 
@@ -34,9 +35,7 @@ const SpellSearch = () => {
         <h2>Please search for a spell</h2>
       }
       {searchResults.map(spell =>
-        <div key={spell._id} className="link-container">
-          {spell.name}
-        </div>
+        <SpellCard key={spell._id} spell={spell} />
       )}
     </main>
   )
